@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Goods</title>
     <link rel="stylesheet" type="text/css" href="../css/login-style.css">
+    <script src="../js/interact.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <div class="global-nav">
@@ -43,19 +44,25 @@
                 <a class="item-link">
                     <img class="item-link-text" id="set-png" src="../source/set.png">
                 </a>
-                <div class="menu">
+                <div class="menu" id="menu-list">
                     <ul class="child-menu">
                         <li class="menu-item" id="shopping-cart">
-                            <img class="child-menu-pic" src="../source/购物车.png">
-                            <span class="child-menu-text">购物车</span>
+                            <a class="second-menu" href="cart.html">
+                                <img class="child-menu-pic" src="../source/购物车.png">
+                                <span class="child-menu-text">购物车</span>
+                            </a>
                         </li>
                         <li class="menu-item" id="orders">
-                            <img class="child-menu-pic" src="../source/订单.png">
-                            <span class="child-menu-text">订单</span>
+                            <a class="second-menu" href="orders.html">
+                                <img class="child-menu-pic" src="../source/订单.png">
+                                <span class="child-menu-text">订单</span>
+                            </a>
                         </li>
                         <li class="menu-item" id="login">
-                            <img class="child-menu-pic" src="../source/头像.png">
-                            <span class="child-menu-text">头像</span>
+                            <a class="second-menu" href="login.html">
+                                <img class="child-menu-pic" src="../source/头像.png">
+                                <span class="child-menu-text">头像</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -63,5 +70,53 @@
         </ul>
     </div>
 </div>
+<div class="good-detail">
+    <div class="good-detail-pic">
+        <img class="detail-picture" src="../source/detail1.jpg">
+    </div>
+    <div class="good-detail-var" id="good-title">
+        <span class="good-name">联想拯救者Y700 15.6英寸游戏笔记本电脑</span>
+    </div>
+    <div class="good-detail-var" id="good-value">
+        <span class="good-price">￥5,899</span>
+    </div>
+    <div class="good-detail-var" id="good-introduce">
+        <p>第十代英特尔酷睿标压i7-10750H处理器,6核12线程,2.6GHz基本频率,5.0GHz理论单核睿频</p>
+        <p>全系标配100%RGB高色域IPS屏,DC调光技术,5.54mm左右窄边框,物理防窥摄像头</p>
+        <p>16G DDR4 2933MHz内存,512G PCleNVMe TLC,支持SSD扩展</p>
+        <p>NVIDIA GeForce GTX 1650Ti,GDDR6 4G显存</p>
+        <p>HDMI2.0,Type-C,双USB3.2 Gen数据接口</p>
+    </div>
+    <div class="good-detail-var" id="good-purchase">
+        <button type="button" class="purchase-button">加入购物车</button>
+    </div>
+</div>
 </body>
+<!--<style>-->
+
+<!--</style>-->
+<script type="text/javascript">
+    // 获取导航栏到屏幕顶部的距离
+    var oTop = $("#good-title").offset().top;
+    //获取导航栏的高度，此高度用于保证内容的平滑过渡
+    var martop = $("#good-title").outerHeight();
+
+    var sTop = 0;
+    // 监听页面的滚动
+    $(window).scroll(function () {
+        // 获取页面向上滚动的距离
+        sTop = $(this).scrollTop();
+        // 当导航栏到达屏幕顶端
+        if (sTop >= (oTop)) {
+            // 修改导航栏position属性，使之固定在屏幕顶端
+            $("#good-title").css({ "position": "fixed", "top": "55px" });
+            // 修改内容的margin-top值，保证平滑过渡
+            // $(".content").css({ "margin-top": martop });
+        } else {
+            // 当导航栏脱离屏幕顶端时，回复原来的属性
+            $("#good-title").css({ "position": "static" });
+            // $(".content").css({ "margin-top": "0" });
+        }
+    });
+</script>
 </html>

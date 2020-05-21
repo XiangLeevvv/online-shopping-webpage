@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Sportx</title>
     <link rel="stylesheet" type="text/css" href="../css/login-style.css">
+    <script src="../js/interact.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <div class="global-nav">
@@ -43,19 +44,25 @@
                 <a class="item-link">
                     <img class="item-link-text" id="set-png" src="../source/set.png">
                 </a>
-                <div class="menu">
+                <div class="menu" id="menu-list">
                     <ul class="child-menu">
                         <li class="menu-item" id="shopping-cart">
-                            <img class="child-menu-pic" src="../source/购物车.png">
-                            <span class="child-menu-text">购物车</span>
+                            <a class="second-menu" href="cart.html">
+                                <img class="child-menu-pic" src="../source/购物车.png">
+                                <span class="child-menu-text">购物车</span>
+                            </a>
                         </li>
                         <li class="menu-item" id="orders">
-                            <img class="child-menu-pic" src="../source/订单.png">
-                            <span class="child-menu-text">订单</span>
+                            <a class="second-menu" href="orders.html">
+                                <img class="child-menu-pic" src="../source/订单.png">
+                                <span class="child-menu-text">订单</span>
+                            </a>
                         </li>
                         <li class="menu-item" id="login">
-                            <img class="child-menu-pic" src="../source/头像.png">
-                            <span class="child-menu-text">头像</span>
+                            <a class="second-menu" href="login.html">
+                                <img class="child-menu-pic" src="../source/头像.png">
+                                <span class="child-menu-text">头像</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -65,8 +72,46 @@
 </div>
 <div class="main-exhibiton">
     <div class="zouMaDeng">
-        <p>这部分是走马灯</p>
-        <img class="exhibit-pic" src="../source/体育1.jpg">
+        <div id="container">
+            <!--图片-->
+            <ul id="banner">
+                <li>
+                    <a href="#">
+                        <img class="roll-pic" src="../source/体育3.jpg">
+                        <!--为了实现无缝自动轮播：第一张插入图片5-->
+                        <!--最后一张之后，插入图片1-->
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="roll-pic" src="../source/体育1.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="roll-pic" src="../source/体育2.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="roll-pic" src="../source/体育3.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="roll-pic" src="../source/体育1.jpg">
+                    </a>
+                </li>
+            </ul>
+            <!--伴随移动的小圆点-->
+            <div id="buttons">
+                <span index="1" class="on"></span>
+                <span index="2"></span>
+                <span index="3"></span>
+            </div>
+            <a href="javascript:;" id="prev" class="arrow">&lt;</a>  <!--向左-->
+            <a href="javascript:;" id="next" class="arrow">&gt;</a>  <!--向右-->
+        </div>
     </div>
     <div class="exhibition-detail">
         <ul class="goods-pic">

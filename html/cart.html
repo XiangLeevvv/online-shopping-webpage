@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Cart</title>
     <link rel="stylesheet" type="text/css" href="../css/login-style.css">
+    <script src="../js/interact.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <div class="global-nav">
@@ -43,19 +44,25 @@
                 <a class="item-link">
                     <img class="item-link-text" id="set-png" src="../source/set.png">
                 </a>
-                <div class="menu">
+                <div class="menu" id="menu-list">
                     <ul class="child-menu">
                         <li class="menu-item" id="shopping-cart">
-                            <img class="child-menu-pic" src="../source/购物车.png">
-                            <span class="child-menu-text">购物车</span>
+                            <a class="second-menu" href="cart.html">
+                                <img class="child-menu-pic" src="../source/购物车.png">
+                                <span class="child-menu-text">购物车</span>
+                            </a>
                         </li>
                         <li class="menu-item" id="orders">
-                            <img class="child-menu-pic" src="../source/订单.png">
-                            <span class="child-menu-text">订单</span>
+                            <a class="second-menu" href="orders.html">
+                                <img class="child-menu-pic" src="../source/订单.png">
+                                <span class="child-menu-text">订单</span>
+                            </a>
                         </li>
                         <li class="menu-item" id="login">
-                            <img class="child-menu-pic" src="../source/头像.png">
-                            <span class="child-menu-text">头像</span>
+                            <a class="second-menu" href="login.html">
+                                <img class="child-menu-pic" src="../source/头像.png">
+                                <span class="child-menu-text">头像</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -63,5 +70,85 @@
         </ul>
     </div>
 </div>
+<div class="cart">
+    <div class="cart-header">
+        <img class="cart-header-pic" src="../source/购物车.png">
+        <span class="cart-header-text" id="cart-logo">购物车</span>
+        <span class="cart-header-text" id="cart-price">价格</span>
+        <span class="cart-header-text" id="cart-num">数量</span>
+    </div>
+    <div class="cart-detail">
+        <div class="cart-detail-pic">
+            <img class="item-pic" src="../source/电子1.jpg">
+        </div>
+        <div class="cart-detail-text">
+            <span class="item-name">联想拯救者Y700 15.6英寸游戏笔记本发</span><br/>
+        </div>
+        <div class="cart-detail-price">
+            <span class="item-price">￥5899</span>
+        </div>
+        <div class="cart-detail-num">
+            <span class="item-num">1</span>
+        </div>
+    </div>
+    <div class="cart-detail">
+        <div class="cart-detail-pic">
+            <img class="item-pic" src="../source/电子1.jpg">
+        </div>
+        <div class="cart-detail-text">
+            <span class="item-name">联想拯救者Y700 15.6英寸游戏笔记本发射点发生阿斯蒂芬收到</span><br/>
+        </div>
+        <div class="cart-detail-price">
+            <span class="item-price">￥5899</span>
+        </div>
+        <div class="cart-detail-num">
+            <span class="item-num">1</span>
+        </div>
+    </div>
+    <div class="cart-detail">
+        <div class="cart-detail-pic">
+            <img class="item-pic" src="../source/电子1.jpg">
+        </div>
+        <div class="cart-detail-text">
+            <span class="item-name">联想拯救者Y700 15.6英寸游戏笔记本发射点发生阿斯蒂芬收到</span><br/>
+        </div>
+        <div class="cart-detail-price">
+            <span class="item-price">￥5899</span>
+        </div>
+        <div class="cart-detail-num">
+            <span class="item-num">1</span>
+        </div>
+    </div>
+    <div class="cart-detail">
+        <div class="cart-detail-pic">
+            <img class="item-pic" src="../source/电子1.jpg">
+        </div>
+        <div class="cart-detail-text">
+            <span class="item-name">联想拯救者Y700 15.6英寸游戏笔记本发射点发生阿斯蒂芬收到</span><br/>
+        </div>
+        <div class="cart-detail-price">
+            <span class="item-price">￥5899</span>
+        </div>
+        <div class="cart-detail-num">
+            <span class="item-num">1</span>
+        </div>
+    </div>
+</div>
+<div class="cart-check">
+    <div class="check-text">
+        <span class="total-price">
+            总价: ￥17697
+        </span>
+    </div>
+    <div class="check-button">
+        <button type="button" class="check-button-detail">
+            <img class="money" src="../source/金额.png">
+            结算
+        </button>
+    </div>
+</div>
 </body>
+<!--<style>-->
+
+<!--</style>-->
 </html>

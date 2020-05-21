@@ -70,6 +70,8 @@ body{
     margin-top: 35px;
     width: auto;
     height: auto;
+    display: none;
+    z-index: 2;
 }
 .child-menu{
     width: 120px;
@@ -90,6 +92,10 @@ body{
 .child-menu-text{
     margin-bottom: 2px;
     padding-left: 5px;
+    color: #515151;
+}
+.second-menu{
+    text-decoration: none;
 }
 .main{
     position: absolute;
@@ -139,6 +145,7 @@ body{
     color: white;
     font-size: 20px;
     margin-top: 30px;
+    outline:none;
 }
 .login-button:hover{
     cursor: pointer;
@@ -166,8 +173,8 @@ body{
     text-align: center;
 }
 .exhibit-pic{
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
 }
 .good{
     list-style-type: none;
@@ -179,4 +186,247 @@ body{
 .good-picture{
     width: 400px;
     height: 400px;
+}
+
+.good-detail{
+    position: absolute;
+    top: 55px;
+    width: 100%;
+}
+.good-detail-pic{
+    float: left;
+    width: 800px;
+    height: 800px;
+}
+.detail-picture{
+    float: left;
+    width: 600px;
+    height: 600px;
+    margin: 30px 0 0 30px;
+    border: 1px solid #a2a2a2;
+}
+#good-title{
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 100px;
+}
+#good-value{
+    font-weight: 600;
+    font-size: 20px;
+    color: dodgerblue;
+    margin-top: 30px;
+}
+#good-introduce{
+    margin-top: 30px;
+    font-size: 14px;
+}
+.purchase-button{
+    border: 0;
+    border-radius: 10px;
+    width: 160px;
+    height: 50px;
+    margin-top: 100px;
+    background-color: #0070c9;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+}
+.purchase-button:hover{
+    background-color: #42a1ec;
+    cursor: pointer;
+}
+
+.cart{
+    position: absolute;
+    top: 55px;
+    width: 70%;
+    min-width: 750px;
+    float: left;
+}
+.cart-header{
+    width: 90%;
+    margin: 30px 0 0 50px;
+    min-width: 750px;
+    border-bottom: 1px solid #a2a2a2;
+}
+.cart-header-pic{
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+}
+.cart-header-text{
+    font-weight: 600;
+    font-size: 20px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+#cart-price{
+    margin-left: 62%;
+}
+#cart-num{
+    margin-left: 10%;
+}
+.cart-detail{
+    width: 90%;
+    height: auto;
+    min-width: 750px;
+    margin: 20px 0 0 50px;
+    min-height: 130px;
+    border-bottom: 1px solid #a2a2a2;
+    vertical-align: middle;
+}
+.cart-detail-pic{
+    float: left;
+    width: 120px;
+    height: 120px;
+}
+.item-pic{
+    width: 120px;
+    height: 120px;
+}
+.cart-detail-text{
+    float: left;
+    width: 55%;
+    margin-left: 5%;
+    margin-top: 20px;
+    vertical-align: center;
+}
+.item-name{
+    font-size: 20px;
+    display:inline-block;
+    width: 100%;
+    word-wrap: break-word;
+}
+.cart-detail-price{
+    float: left;
+    width: auto;
+    margin-top: 20px;
+    vertical-align: middle;
+}
+.item-price{
+    font-size: 20px;
+    font-weight: 600;
+    color: #B12704;
+}
+.cart-detail-num{
+    float: left;
+    width: auto;
+    margin-left: 10%;
+    margin-top: 20px;
+    vertical-align: middle;
+}
+.item-num{
+    font-size: 20px;
+    font-weight: 500;
+    color: #0070c9;
+}
+.cart-check{
+    position: fixed;
+    top: 115px;
+    left: 75%;
+    width: 20%;
+    height: 150px;
+    float: left;
+    border-radius: 3px;
+    background-color: rgba(0,0,0,0.1);
+}
+.check-text{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.total-price{
+    font-weight: 600;
+    font-size: 24px;
+    font-family: helvetica;
+}
+.check-button{
+    text-align: center;
+}
+.check-button-detail{
+    width: 80%;
+    height: 3rem;
+    border: 0;
+    border-radius: 5px;
+    background-color: #4267b2;
+    color: white;
+    font-size: 20px;
+    outline:none;
+}
+.check-button-detail:hover{
+    cursor: pointer;
+    background-color: #42a1ec;
+}
+.money{
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+/*
+**轮播图css
+*/
+#container{
+    position: relative; /*为了给左右按钮 和小圆点定位*/
+}
+#container:hover .arrow {   /*鼠标移入: id=arrow的元素显示*/
+    display: block;
+}
+#banner{
+    position: absolute;
+}
+#banner li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: left;   /*将li标签左浮动*/
+}
+#banner li img{
+    /*将img的属性从inline 改为black为了清除图片之间的间隙*/
+    display: block;
+    width: 500px;
+    height: 500px;
+}
+#buttons{
+    position: absolute; /*小圆点绝对定位*/
+    height: 10px;
+    width: 100px;
+    bottom: 0;
+    left: 45%;  /*左右居中显示*/
+    z-index: 10;
+}
+#buttons span{
+    cursor: pointer;
+    float: left;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%; /*设置成圆*/
+    background: #333;
+    margin-right: 5px;
+}
+/*对应点亮的小圆点：成橘色*/
+#buttons .on{
+    background: orangered;
+}
+/*左右按钮*/
+.arrow{
+    cursor: pointer;
+    display: none;  /*设置暂时不显示*/
+    line-height: 100%;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    position: absolute;  /*设置定位*/
+    z-index: 20;
+    top: 50%;
+    background: RGBA(0,0,0,.3);  /*背景透明度*/
+    color: #fff;
+}
+#prev{
+    left: 0;
+}
+#next{
+    right: 0;
 }

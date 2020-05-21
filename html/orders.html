@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Orders</title>
     <link rel="stylesheet" type="text/css" href="../css/login-style.css">
+    <script src="../js/interact.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <div class="global-nav">
@@ -43,25 +44,34 @@
                 <a class="item-link">
                     <img class="item-link-text" id="set-png" src="../source/set.png">
                 </a>
-                <div class="menu">
+                <div class="menu" id="menu-list">
                     <ul class="child-menu">
                         <li class="menu-item" id="shopping-cart">
-                            <img class="child-menu-pic" src="../source/购物车.png">
-                            <span class="child-menu-text">购物车</span>
+                            <a class="second-menu" href="cart.html">
+                                <img class="child-menu-pic" src="../source/购物车.png">
+                                <span class="child-menu-text">购物车</span>
+                            </a>
                         </li>
                         <li class="menu-item" id="orders">
-                            <img class="child-menu-pic" src="../source/订单.png">
-                            <span class="child-menu-text">订单</span>
+                            <a class="second-menu" href="orders.html">
+                                <img class="child-menu-pic" src="../source/订单.png">
+                                <span class="child-menu-text">订单</span>
+                            </a>
                         </li>
                         <li class="menu-item" id="login">
-                            <img class="child-menu-pic" src="../source/头像.png">
-                            <span class="child-menu-text">头像</span>
+                            <a class="second-menu" href="login.html">
+                                <img class="child-menu-pic" src="../source/头像.png">
+                                <span class="child-menu-text">头像</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
             </li>
         </ul>
     </div>
+</div>
+<div class="orders">
+    <div class="order-header"></div>
 </div>
 </body>
 </html>
