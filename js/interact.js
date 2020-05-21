@@ -19,7 +19,12 @@ window.onload = function () {
     **轮播图js
     */
     //获取元素
-    var container =  document.getElementById("container");
+    if (!getById("container-good")){
+        var container =  document.getElementById("container");
+    }
+    else{
+        var container =  document.getElementById("container-good");
+    }
     var banner = document.getElementById("banner");
     var li = document.querySelectorAll("#banner li");
     var spanNode = document.querySelectorAll("#buttons span");
@@ -37,7 +42,12 @@ window.onload = function () {
     container.style.width = img.offsetWidth + "px";
     container.style.height = img.offsetHeight + "px";
     container.style.overflow = "hidden";
-    container.style.left = (0.5 * curWidth - 250) + "px";
+    if(!getById("container-good")){
+        container.style.left = (0.5 * curWidth - 250) + "px";
+    }
+    else{
+        container.style.left = 50 + "px";
+    }
 
     //给banner 设置宽高
     banner.style.height = img.offsetHeight + "px";
