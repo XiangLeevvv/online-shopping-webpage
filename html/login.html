@@ -61,7 +61,13 @@
                         <li class="menu-item" id="login">
                             <a class="second-menu" href="login.html">
                                 <img class="child-menu-pic" src="../source/头像.png">
-                                <span class="child-menu-text">头像</span>
+                                <span class="child-menu-text">登录</span>
+                            </a>
+                        </li>
+                        <li class="menu-item" id="logout">
+                            <a class="second-menu" href="#" onclick="logout()">
+                                <img class="child-menu-pic" src="../source/头像.png">
+                                <span class="child-menu-text">退出</span>
                             </a>
                         </li>
                     </ul>
@@ -78,7 +84,7 @@
                    onfocus="if (value =='用户名'){value =''}" onblur="if (value ==''){value='用户名';this.style.color=''}" name="userId" maxlength="32">
             <input class="login-input" id="passWord" type="text" value="密码" onclick="this.style.color='black';this.type='password'"
                    onfocus="if (value =='密码'){value =''}" onblur="if (value ==''){value='密码';this.style.color='';this.type='text'}" name="passWord" maxlength="32">
-            <button type="button" class="login-button">登录</button>
+            <button type="button" class="login-button" onclick="login()">登录</button>
             <div class="register-in-login">
                 <a class="click-to-register" href="register.html">
                     <span class="register-click">点击创建账户</span>
@@ -88,7 +94,7 @@
     </div>
 </div>
 </body>
-<!--<style>-->
+<!--<script>-->
 
-<!--</style>-->
+<!--</script>-->
 </html>

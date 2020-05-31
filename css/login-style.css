@@ -124,7 +124,7 @@ body{
     position: absolute;
     margin-top: 30px;
     margin-left: 40%;
-    width: 250px;
+    width: 300px;
 }
 .login-input{
     border: 0;
@@ -138,7 +138,7 @@ body{
     color: #a2a2a2;
 }
 .login-button{
-    width: 100%;
+    width: 250px;
     height: 3rem;
     border-radius: 5px;
     border: 0;
@@ -188,7 +188,26 @@ body{
     width: 400px;
     height: 400px;
 }
-
+.underline{
+    height: 26px;
+}
+.price{
+    float: left;
+    margin-left: 150px;
+}
+.btn{
+    width: 20px;
+    height: 20px;
+    margin-left: 40%;
+}
+.btn:hover{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+.price{
+    font-size: 18px;
+}
 .good-detail{
     position: absolute;
     top: 55px;
@@ -250,26 +269,35 @@ body{
 }
 .cart-header{
     width: 90%;
+    height: 40px;
     margin: 30px 0 0 50px;
     min-width: 750px;
     border-bottom: 1px solid #a2a2a2;
 }
-.cart-header-pic{
-    width: 40px;
+.header-pic{
+    float: left;
     height: 40px;
-    vertical-align: middle;
+}
+.header-text{
+    float: left;
+    height: 40px;
+    margin-left: 10px;
+}
+.header-price{
+    float: left;
+    width: 10%;
+    margin-left: 63%;
+}
+.cart-header-pic{
+    width: 30px;
+    height: 30px;
 }
 .cart-header-text{
     font-weight: 600;
     font-size: 20px;
-    margin-left: 10px;
-    vertical-align: middle;
-}
-#cart-price{
-    margin-left: 62%;
 }
 #cart-num{
-    margin-left: 10%;
+    margin-left: 8%;
 }
 .cart-detail{
     width: 90%;
@@ -304,7 +332,7 @@ body{
 }
 .cart-detail-price{
     float: left;
-    width: auto;
+    width: 10%;
     margin-top: 20px;
     vertical-align: middle;
 }
@@ -330,10 +358,10 @@ body{
     top: 115px;
     left: 75%;
     width: 20%;
-    height: 150px;
+    height: auto;
     float: left;
     border-radius: 3px;
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0,0,0,0);
 }
 .check-text{
     text-align: center;
@@ -345,15 +373,16 @@ body{
     font-size: 24px;
     font-family: helvetica;
 }
+
 .check-button{
     text-align: center;
 }
 .check-button-detail{
-    width: 80%;
+    width: 70%;
     height: 3rem;
     border: 0;
     border-radius: 5px;
-    background-color: #4267b2;
+    background-color: rgba(0,0,0,0.3);
     color: white;
     font-size: 20px;
     outline:none;
@@ -363,6 +392,31 @@ body{
     background-color: #42a1ec;
 }
 .money{
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+}
+
+.clearCart{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.clear-button-detail{
+    width: 70%;
+    height: 3rem;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    font-size: 20px;
+    outline:none;
+}
+.clear-button-detail:hover{
+    cursor: pointer;
+    background-color: #FF0000;
+}
+.clear{
     width: 30px;
     height: 30px;
     vertical-align: middle;
@@ -463,7 +517,7 @@ body{
 .order-detail-time{
     float: left;
     width: auto;
-    margin-left: 10%;
+    margin-left: 8%;
     margin-top: 20px;
     vertical-align: middle;
 }

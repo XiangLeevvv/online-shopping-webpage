@@ -5,6 +5,7 @@
     <title>Cart</title>
     <link rel="stylesheet" type="text/css" href="../css/login-style.css">
     <script src="../js/interact.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/cartJS.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <div class="global-nav">
@@ -44,7 +45,7 @@
                 <a class="item-link">
                     <img class="item-link-text" id="set-png" src="../source/set.png">
                 </a>
-                <div class="menu">
+                <div class="menu" id="menu-list">
                     <ul class="child-menu">
                         <li class="menu-item" id="shopping-cart">
                             <a class="second-menu" href="cart.html">
@@ -61,7 +62,13 @@
                         <li class="menu-item" id="login">
                             <a class="second-menu" href="login.html">
                                 <img class="child-menu-pic" src="../source/头像.png">
-                                <span class="child-menu-text">头像</span>
+                                <span class="child-menu-text">登录</span>
+                            </a>
+                        </li>
+                        <li class="menu-item" id="logout">
+                            <a class="second-menu" href="#" onclick="logout()">
+                                <img class="child-menu-pic" src="../source/头像.png">
+                                <span class="child-menu-text">退出</span>
                             </a>
                         </li>
                     </ul>
@@ -70,85 +77,37 @@
         </ul>
     </div>
 </div>
-<div class="cart">
+<div class="cart" id="myCart">
     <div class="cart-header">
-        <img class="cart-header-pic" src="../source/购物车.png">
-        <span class="cart-header-text" id="cart-logo">购物车</span>
-        <span class="cart-header-text" id="cart-price">价格</span>
-        <span class="cart-header-text" id="cart-num">数量</span>
-    </div>
-    <div class="cart-detail">
-        <div class="cart-detail-pic">
-            <img class="item-pic" src="../source/电子1.jpg">
+        <div class="header-pic">
+            <img class="cart-header-pic" src="../source/购物车.png">
         </div>
-        <div class="cart-detail-text">
-            <span class="item-name">联想拯救者Y700 15.6英寸游戏笔记本发</span><br/>
+        <div class="header-text">
+            <span class="cart-header-text" id="cart-logo">购物车</span>
         </div>
-        <div class="cart-detail-price">
-            <span class="item-price">￥5899</span>
+        <div class="header-price">
+            <span class="cart-header-text" id="cart-price">价格</span>
         </div>
-        <div class="cart-detail-num">
-            <span class="item-num">1</span>
-        </div>
-    </div>
-    <div class="cart-detail">
-        <div class="cart-detail-pic">
-            <img class="item-pic" src="../source/电子1.jpg">
-        </div>
-        <div class="cart-detail-text">
-            <span class="item-name">联想拯救者Y700 15.6英寸游戏笔记本发射点发生阿斯蒂芬收到</span><br/>
-        </div>
-        <div class="cart-detail-price">
-            <span class="item-price">￥5899</span>
-        </div>
-        <div class="cart-detail-num">
-            <span class="item-num">1</span>
-        </div>
-    </div>
-    <div class="cart-detail">
-        <div class="cart-detail-pic">
-            <img class="item-pic" src="../source/电子1.jpg">
-        </div>
-        <div class="cart-detail-text">
-            <span class="item-name">联想拯救者Y700 15.6英寸游戏笔记本发射点发生阿斯蒂芬收到</span><br/>
-        </div>
-        <div class="cart-detail-price">
-            <span class="item-price">￥5899</span>
-        </div>
-        <div class="cart-detail-num">
-            <span class="item-num">1</span>
-        </div>
-    </div>
-    <div class="cart-detail">
-        <div class="cart-detail-pic">
-            <img class="item-pic" src="../source/电子1.jpg">
-        </div>
-        <div class="cart-detail-text">
-            <span class="item-name">联想拯救者Y700 15.6英寸游戏笔记本发射点发生阿斯蒂芬收到</span><br/>
-        </div>
-        <div class="cart-detail-price">
-            <span class="item-price">￥5899</span>
-        </div>
-        <div class="cart-detail-num">
-            <span class="item-num">1</span>
+        <div class="header-num">
+            <span class="cart-header-text" id="cart-num">数量</span>
         </div>
     </div>
 </div>
 <div class="cart-check">
-    <div class="check-text">
-        <span class="total-price">
-            总价: ￥17697
-        </span>
+    <div class="check-text" id="total">
     </div>
-    <div class="check-button">
-        <button type="button" class="check-button-detail">
+    <div class="check-button" id="checkBtn">
+        <button type="button" class="check-button-detail" onclick="check()">
             <img class="money" src="../source/金额.png">
             结算
         </button>
     </div>
+    <div class="clearCart" id="clearBtn">
+        <button type="button" class="clear-button-detail" onclick="clearCart()">
+            <img class="clear" src="../source/清空购物车.png">
+            清空购物车
+        </button>
+    </div>
 </div>
 </body>
-<!--<style>-->
-
-<!--</style>-->
 </html>

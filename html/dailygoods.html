@@ -61,7 +61,13 @@
                         <li class="menu-item" id="login">
                             <a class="second-menu" href="login.html">
                                 <img class="child-menu-pic" src="../source/头像.png">
-                                <span class="child-menu-text">头像</span>
+                                <span class="child-menu-text">登录</span>
+                            </a>
+                        </li>
+                        <li class="menu-item" id="logout">
+                            <a class="second-menu" href="#" onclick="logout()">
+                                <img class="child-menu-pic" src="../source/头像.png">
+                                <span class="child-menu-text">退出</span>
                             </a>
                         </li>
                     </ul>
@@ -123,19 +129,28 @@
                 <div class="each-good">
                     <img class="good-picture" src="../source/日常1.jpg">
                 </div>
-                <span class="price">￥1899</span>
+                <div class="underline">
+                    <span class="price">￥1899</span>
+                    <img class="btn" src="../source/购物车.png" onclick="addCart('7')">
+                </div>
             </li>
             <li class="good">
                 <div class="each-good">
                     <img class="good-picture" src="../source/日常2.jpg">
                 </div>
-                <span class="price">￥59</span>
+                <div class="underline">
+                    <span class="price">￥59</span>
+                    <img class="btn" src="../source/购物车.png" onclick="addCart('8')">
+                </div>
             </li>
             <li class="good">
                 <div class="each-good">
                     <img class="good-picture" src="../source/日常3.jpg">
                 </div>
-                <span class="price">￥1499</span>
+                <div class="underline">
+                    <span class="price">￥1499</span>
+                    <img class="btn" src="../source/购物车.png" onclick="addCart('9')">
+                </div>
             </li>
         </ul>
     </div>

@@ -61,7 +61,13 @@
                         <li class="menu-item" id="login">
                             <a class="second-menu" href="login.html">
                                 <img class="child-menu-pic" src="../source/头像.png">
-                                <span class="child-menu-text">头像</span>
+                                <span class="child-menu-text">登录</span>
+                            </a>
+                        </li>
+                        <li class="menu-item" id="logout">
+                            <a class="second-menu" href="#" onclick="logout()">
+                                <img class="child-menu-pic" src="../source/头像.png">
+                                <span class="child-menu-text">退出</span>
                             </a>
                         </li>
                     </ul>
@@ -74,15 +80,19 @@
     <div class="login-region">
         <div class="login-form">
             <h1 class="register-header">创建账户</h1>
-            <input class="login-input" id="userName" type="text" value="用户名不可重复" onclick="this.style.color='black'"
-                   onfocus="if (value =='用户名不可重复'){value =''}" onblur="if (value ==''){value='用户名不可重复';this.style.color=''}" name="userId" maxlength="32">
-            <input class="login-input" id="passWord" type="text" value="设置密码" onclick="this.style.color='black';this.type='password'"
-                   onfocus="if (value =='设置密码'){value =''}" onblur="if (value ==''){value='设置密码';this.style.color='';this.type='text'}" name="passWord" maxlength="32">
-            <input class="login-input" id="passWord-check" type="text" value="再次输入密码" onclick="this.style.color='black';this.type='password'"
-                   onfocus="if (value =='再次输入密码'){value =''}" onblur="if (value ==''){value='再次输入密码';this.style.color='';this.type='text'}" name="passWord" maxlength="32">
-            <button type="button" class="login-button">提交</button>
+            <input class="login-input" id="userName" type="text" value="用户名不可重复" required="true" onclick="this.style.color='black'"
+                   onfocus="if (value =='用户名不可重复' || value == '用户名必填'){value =''}" onblur="if (value ==''){value='用户名必填';this.style.color=''}" name="userId" maxlength="32">
+            <input class="login-input" id="passWord" type="text" value="设置密码" required="true" onclick="this.style.color='black';this.type='password'"
+                   onfocus="if (value =='设置密码' || value =='密码必填'){value =''}" onblur="if (value ==''){value='密码必填';this.style.color='';this.type='text'}" name="passWord" maxlength="32">
+            <input class="login-input" id="passWord-check" type="text" value="再次输入密码" onkeyup="validate()" required="true" onkeyup="validate()" onclick="this.style.color='black';this.type='password'"
+                   onfocus="if (value =='再次输入密码' || value =='密码必填'){value =''}" onblur="if (value ==''){value='再次输入密码';this.style.color='';this.type='text'}" name="passWord" maxlength="32">
+            <img src="" id="warn">
+            <button type="button" class="login-button" id="submit" onclick="submit()">提交</button>
         </div>
     </div>
 </div>
 </body>
+<script>
+
+</script>
 </html>

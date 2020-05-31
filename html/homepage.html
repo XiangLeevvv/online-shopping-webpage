@@ -61,7 +61,13 @@
                         <li class="menu-item" id="login">
                             <a class="second-menu" href="login.html">
                                 <img class="child-menu-pic" src="../source/头像.png">
-                                <span class="child-menu-text">头像</span>
+                                <span class="child-menu-text">登录</span>
+                            </a>
+                        </li>
+                        <li class="menu-item" id="logout">
+                            <a class="second-menu" href="#" onclick="logout()">
+                                <img class="child-menu-pic" src="../source/头像.png">
+                                <span class="child-menu-text">退出</span>
                             </a>
                         </li>
                     </ul>
@@ -122,43 +128,65 @@
             <li class="good">
                 <div class="each-good">
                     <a href="goods.html">
-                        <img class="good-picture" src="../source/电子1.jpg">
+                        <img class="good-picture" id="1" src="../source/电子1.jpg">
                     </a>
                 </div>
-                <span class="price">￥5899</span>
+                <div class="underline">
+                    <span class="price">￥5899</span>
+                    <img class="btn" src="../source/购物车.png" onclick="addCart('1')">
+                </div>
+
             </li>
             <li class="good">
                 <div class="each-good">
-                    <img class="good-picture" src="../source/电子2.jpg">
+                    <img class="good-picture" id="2" src="../source/电子2.jpg">
                 </div>
-                <span class="price">￥1899</span>
+                <div class="underline">
+                    <span class="price">￥1899</span>
+                    <img class="btn" src="../source/购物车.png" onclick="addCart('2')">
+                </div>
             </li>
             <li class="good">
                 <div class="each-good">
-                    <img class="good-picture" src="../source/电子3.jpg">
+                    <img class="good-picture" id="3" src="../source/电子3.jpg">
                 </div>
-                <span class="price">￥3899</span>
+                <div class="underline">
+                    <span class="price">￥3899</span>
+                    <img class="btn" src="../source/购物车.png" onclick="addCart('3')">
+                </div>
             </li>
             <li class="good">
                 <div class="each-good">
-                    <img class="good-picture" src="../source/电子4.jpg">
+                    <img class="good-picture" id="4" src="../source/电子4.jpg">
                 </div>
-                <span class="price">￥9999</span>
+                <div class="underline">
+                    <span class="price">￥9999</span>
+                    <img class="btn" src="../source/购物车.png" onclick="addCart('4')">
+                </div>
             </li>
             <li class="good">
                 <div class="each-good">
-                    <img class="good-picture" src="../source/电子5.jpg">
+                    <img class="good-picture" id="5" src="../source/电子5.jpg">
                 </div>
-                <span class="price">￥1599</span>
+                <div class="underline">
+                    <span class="price">￥1599</span>
+                    <img class="btn" src="../source/购物车.png" onclick="addCart('5')">
+                </div>
             </li>
             <li class="good">
                 <div class="each-good">
-                    <img class="good-picture" src="../source/电子6.jpg">
+                    <img class="good-picture" id="6" src="../source/电子6.jpg">
                 </div>
-                <span class="price">￥9700</span>
+                <div class="underline">
+                    <span class="price">￥9700</span>
+                    <img class="btn" src="../source/购物车.png" onclick="addCart('6')">
+                </div>
             </li>
         </ul>
     </div>
 </div>
 </body>
+<!--<script>-->
+<!--    -->
+<!--</script>-->
 </html>

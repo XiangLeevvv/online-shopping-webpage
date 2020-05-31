@@ -61,7 +61,13 @@
                         <li class="menu-item" id="login">
                             <a class="second-menu" href="login.html">
                                 <img class="child-menu-pic" src="../source/头像.png">
-                                <span class="child-menu-text">头像</span>
+                                <span class="child-menu-text">登录</span>
+                            </a>
+                        </li>
+                        <li class="menu-item" id="logout">
+                            <a class="second-menu" href="#" onclick="logout()">
+                                <img class="child-menu-pic" src="../source/头像.png">
+                                <span class="child-menu-text">退出</span>
                             </a>
                         </li>
                     </ul>
@@ -118,7 +124,7 @@
         </div>
     </div>
     <div class="good-detail-var" id="good-title">
-        <span class="good-name">联想拯救者Y700 15.6英寸游戏笔记本电脑</span>
+        <span class="good-name" id="goodName">联想拯救者Y700 15.6英寸游戏笔记本电脑</span>
     </div>
     <div class="good-detail-var" id="good-value">
         <span class="good-price">￥5,899</span>
@@ -131,35 +137,9 @@
         <p>HDMI2.0,Type-C,双USB3.2 Gen数据接口</p>
     </div>
     <div class="good-detail-var" id="good-purchase">
-        <button type="button" class="purchase-button">加入购物车</button>
+        <button type="button" class="purchase-button" onclick="putIn()">加入购物车</button>
     </div>
 </div>
 </body>
-<!--<style>-->
 
-<!--</style>-->
-<script type="text/javascript">
-    // 获取导航栏到屏幕顶部的距离
-    var oTop = $("#good-title").offset().top;
-    //获取导航栏的高度，此高度用于保证内容的平滑过渡
-    var martop = $("#good-title").outerHeight();
-
-    var sTop = 0;
-    // 监听页面的滚动
-    $(window).scroll(function () {
-        // 获取页面向上滚动的距离
-        sTop = $(this).scrollTop();
-        // 当导航栏到达屏幕顶端
-        if (sTop >= (oTop)) {
-            // 修改导航栏position属性，使之固定在屏幕顶端
-            $("#good-title").css({ "position": "fixed", "top": "55px" });
-            // 修改内容的margin-top值，保证平滑过渡
-            // $(".content").css({ "margin-top": martop });
-        } else {
-            // 当导航栏脱离屏幕顶端时，回复原来的属性
-            $("#good-title").css({ "position": "static" });
-            // $(".content").css({ "margin-top": "0" });
-        }
-    });
-</script>
 </html>
